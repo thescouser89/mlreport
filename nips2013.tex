@@ -4,6 +4,7 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
 %\documentstyle[nips13submit_09,times,art10]{article} % For LaTeX 2.09
 
 
@@ -42,6 +43,8 @@ University of Toronto\\
 
 \begin{abstract}
 Detecting and reading text from photographs is a challenging computer vision problem that has garnered a lot of work in recent years. Being able to accurately localize, and recognize arbitrary digits from natural images is hard due to the complex scenes in those images. In this report, we apply convolutional neural networks to learn a unique set of features optimized for this task, and discuss the evolution of our neural network topology to achieve a high accuracy on the validation set. We use over 500,000 labeled digits obtained from the SVHN\cite{svhn} dataset for training. Moreover, we also describe our attempt to localize digits from unconstrained images by using image processing techniques and unsupervised learning.
+
+All code for this paper can be found in our GitHub repo: \url{https://github.com/dilandry/csc2515h}
 \end{abstract}
 
 \section{Background}
