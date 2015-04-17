@@ -84,9 +84,7 @@ Another way to decrease overfitting in our neural network is to simply augment o
 \subsection{Image Segmentation}
 The unsegmented data set contains images of houses' address plates at different levels of zoom of zoom and isolation. Moreover, the number of digits that a given image contains is also unknown. Consequently, separating each individual digit is far from trivial.
 
-One approach could have been to randomly take squares from the image and train a classifier to decide whether it contains a digit or not. This could have worked rather well if the goal was just to find digits in an image. However, for segmentation (one image per digit, centered), its performance would have been random at best. Since, to properly decode an address, the information contained in the number of digits and their order is as important as the digits themselves, this approach was rejected.
-
-Accordingly, here, we wrote an algorithm loosely inspired on the MATLAB OCR example\cite{automaticdetect}.
+For this project, an algorithm loosely inspired on MATLAB's OCR example\cite{automaticdetect}. Unfortunately, all attempts to leverage machine learning techiques in this parst of this algorithm has performed worse than hardcoding decisions (more on that in the results section).
 
 First, the images are preprocessed: they are resized to a height of 200 pixels while keeping the aspect ratio the same and converted to grayscale.
 
@@ -108,7 +106,7 @@ First, the images are preprocessed: they are resized to a height of 200 pixels w
 \endminipage
 \end{figure}
 
-The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.'s "detection"\cite{coates2011text}). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (very scattered) to create connected regions. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit (Figure~\ref{fig:vertical} \& ~\ref{fig:mask}). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions.
+The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.'s "detection"\cite{coates2011text}). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (which are very scattered) to create connected regions. These connected regions are then enclosed in the smallest box that can contain them completely. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit (Figure~\ref{fig:vertical} \& ~\ref{fig:mask}). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions.
 
 Depending on the image, this preliminary analysis can produce a lot of possibilities. To solve this problem, the candidate connected zones are filtered by size, aspect ratio and solidity. Areas that are too narrow, fat or have a low solidity (level of vertical gradients in a box containing the connected zone) are discarded. The zone that has the greatest probability of containing a digit is then passed to the next step.
 
@@ -220,13 +218,21 @@ It is important to point out that the digit segmentation algorithm is mostly an 
 This is because this engineered solution systematically performed better than the machine learning techniques we used and that any attempt to integrate machine learning algorithms degraded the results. Below are a few of the techniques that were tried but later abandoned.
 
 \subsubsection{Better Boundaries}
-An attempt to use a more advanced edge detection algorithm, P. Isola et. al.’s crisp boundary detection\cite{isola2014crisp}, was made without success. Indeed, with low contrast pictures, it would detect tiles due to colour imperfections in the image file’s encoding while, in images where a strong colour contrast that is not due to the address’ digits is present (such as the edge of a wall), it would completely disregard the lower contrast changes due to the digits.
+An attempt to use a more advanced edge detection algorithm, P. Isola et. al.’s crisp boundary detection\cite{isola2014crisp}, was made without success. This algorithm, by leveraging the mutual information given by the pixels in the image, performs really well when segmenting complex images. However, the results obtained here, on simple lower resolution images were not usable for our purposed. Indeed, with low contrast pictures, it would detect tiles due to colour imperfections in the image file’s encoding while, in images where a strong colour contrast that is not due to the address’ digits is present (such as the edge of a wall), it would completely disregard the lower contrast changes due to the digits.
+
+\begin{center}
+\begin{figure}[!htb]
+  \includegraphics[width=0.8\linewidth]{images/image09}
+  \caption{Sobel Thresholding vs. P.Isola's Crisp Boundary Detection Algorithm (before and after thresholding)}
+  \label{fig:isola}
+\end{figure}
+\end{center}
 
 \subsubsection{PCA for Segmentation}
 In order to make the separation of the digits easier, an attempt was made to use PCA to generate the histogram in Fig. 4 (and to rectify the image when the address was diagonal). This, for instance, would have made it easier to separate numbers that are placed in diagonal because it would have been rotated to an horizontal orientation (the current algorithm tends to fail at this task because of the vertical overlap between the numbers). However, this approach was abandoned because it also had major adverse effects, such as a tendency to flip the image vertically or horizontally that made it perform worse than a simple count of white pixels.
 
-\subsubsection{kNN for Segmentation}
-Further, kNN was tried as a way to locate the centers of the digits. The white pixel count was be used to guess a value for k and, then, the image was split using the centroids found by kNN on the thresholded image. This caused more errors than a simple split however, because, even if the number of digits found was correct, the centroids were sometimes distributed vertically (i.e. two centroids on the same number) instead of all horizontally. Forcing the kNN to be only horizontal produced slightly better results but was still not as good as a simple split because it was sensitive to noise (address plate edges) and weight distributions in the digits (a “5” typically has a centroid in its upper-left portion, for instance).
+\subsubsection{k-Means for Segmentation}
+Further, k-Means was tried as a way to locate the centers of the digits. The white pixel count was be used to guess a value for k and, then, the image was split using the centroids found by k-Means on the thresholded image. This caused more errors than a simple split however, because, even if the number of digits found was correct, the centroids were sometimes distributed vertically (i.e. two centroids on the same number) instead of all horizontally. Forcing the k-Means to be only horizontal produced slightly better results but was still not as good as a simple split because it was sensitive to noise (address plate edges) and weight distributions in the digits (a “5” typically has a centroid in its upper-left portion, for instance).
 
 \subsubsection{Results}
 The segmentation results are reported in Table~\ref{table:segmentation}. Please note that the accuracy is based on a “success” being defined as properly isolating and centering ALL the digits in an image (not more or less). For instance, the case where all the digits of an address were found properly where but the edge of the number plate was mistaken for an “1” would be considered a “fail”. 
