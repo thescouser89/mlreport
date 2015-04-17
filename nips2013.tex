@@ -181,7 +181,21 @@ This is not a surprising result since convolutional layers are known to be good 
 
 On the other hand, adding contrast normalization had very little effect on the accuracy. It’s possible that the lack of contrast in the original image was just compensated by some weights being higher (more “sensitive” contrast thresholds). When processing the images with improved contrast, the network would just have learned to be less sensitive while learning the same features. This makes sense; increasing contrast only “boosts” information already present in the image at the first place\cite{lenet5}.
 
-\begin{center}
+
+\begin{center}\begin{center}
+  \begin{tabular}{ | l || c ||}
+    \hline
+    \# of training examples & Accuracy \% \\ \hline \hline
+    73,257 (just the training set) & 89.28 \\ \hline
+    100,000 & 93.74 \\ \hline
+    200,000 & 95.06 \\ \hline
+    300,000 & 95.69 \\ \hline
+    400,000 & 96.00 \\ \hline
+    500,000 & 96.13 \\ \hline
+    604,388 (all of training + all of extras) & 96.50 \\ \hline
+  \end{tabular}
+\end{center}
+
 \begin{figure}[!htb]
   \includegraphics[width=0.8\linewidth]{images/image05}
   \caption{Accuracy vs. Training Examples. (2 convolutional layers, 24 and 32 filters and max-pooling 1 hidden layer, 300 units)}
