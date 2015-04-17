@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.9)  17 APR 2015 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.9)  17 APR 2015 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -237,21 +237,21 @@ Package caption Info: hyperref package is loaded.
 (./nips2013.aux)
 \openout1 = `nips2013.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -271,7 +271,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks16
 )
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 39.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -280,9 +280,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count112
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (./nips2013.out) (./nips2013.out)
 \@outlinefile=\write3
@@ -307,102 +307,99 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 42.
+(Font)              <7> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 42.
+(Font)              <5> on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 42.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
  [1
 
 {/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<images/image02.png, id=131, 493.845pt x 200.75pt>
+<images/image02.png, id=133, 493.845pt x 200.75pt>
 File: images/image02.png Graphic file (type png)
  <use images/image02.png>
-Package pdftex.def Info: images/image02.png used on input line 97.
+Package pdftex.def Info: images/image02.png used on input line 100.
 (pdftex.def)             Requested size: 127.1981pt x 51.70364pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 []\OT1/ptm/m/n/10 Figure 1: |Orig-i-nal Im-age
  []
 
-<images/image06.png, id=132, 936.49875pt x 380.42125pt>
+<images/image06.png, id=134, 936.49875pt x 380.42125pt>
 File: images/image06.png Graphic file (type png)
 
 <use images/image06.png>
-Package pdftex.def Info: images/image06.png used on input line 102.
+Package pdftex.def Info: images/image06.png used on input line 105.
 (pdftex.def)             Requested size: 127.1981pt x 51.6681pt.
- <images/image00.png, id=134, 885.3075pt x 357.335pt>
+ <images/image00.png, id=136, 885.3075pt x 357.335pt>
 File: images/image00.png Graphic file (type png)
 
 <use images/image00.png>
-Package pdftex.def Info: images/image00.png used on input line 107.
+Package pdftex.def Info: images/image00.png used on input line 110.
 (pdftex.def)             Requested size: 127.1981pt x 51.3406pt.
 
-<images/image08.png, id=138, 711.65875pt x 639.38875pt>
+<images/image08.png, id=140, 711.65875pt x 639.38875pt>
 File: images/image08.png Graphic file (type png)
 
 <use images/image08.png>
-Package pdftex.def Info: images/image08.png used on input line 119.
+Package pdftex.def Info: images/image08.png used on input line 122.
 (pdftex.def)             Requested size: 178.86702pt x 160.69559pt.
 
 ! Illegal parameter number in definition of \GetTitleStringResult.
 <to be read again> 
                     
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
 ! Illegal parameter number in definition of \GTS@GlobalString.
 <to be read again> 
                     
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
 ! Illegal parameter number in definition of \@tempa.
 <to be read again> 
                     
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
 ! Illegal parameter number in definition of \reserved@a.
 <to be read again> 
                     
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
 ! Illegal parameter number in definition of \caption@tempa.
 <to be read again> 
                     
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
 ! You can't use `macro parameter character #' in restricted horizontal mode.
 <argument> Digit splitting based on ##
                                        of white pixels per column. The red l...
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
 ! You can't use `macro parameter character #' in horizontal mode.
 <argument> Digit splitting based on ##
                                        of white pixels per column. The red l...
-l.120 ...r column. The red line is the threshold.}
+l.123 ...r column. The red line is the threshold.}
                                                   
 ? 
-<images/image04.png, id=139, 437.635pt x 410.53375pt>
+<images/image04.png, id=141, 437.635pt x 410.53375pt>
 File: images/image04.png Graphic file (type png)
  <use images/image04.png>
-Package pdftex.def Info: images/image04.png used on input line 124.
+Package pdftex.def Info: images/image04.png used on input line 127.
 (pdftex.def)             Requested size: 178.86702pt x 167.79373pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -411,35 +408,35 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-<images/image03.png, id=144, 32.12pt x 32.12pt>
+<images/image03.png, id=146, 32.12pt x 32.12pt>
 File: images/image03.png Graphic file (type png)
  <use images/image03.png>
-Package pdftex.def Info: images/image03.png used on input line 136.
+Package pdftex.def Info: images/image03.png used on input line 139.
 (pdftex.def)             Requested size: 95.39772pt x 95.40546pt.
 
-<images/image07.png, id=145, 32.12pt x 32.12pt>
+<images/image07.png, id=147, 32.12pt x 32.12pt>
 File: images/image07.png Graphic file (type png)
  <use images/image07.png>
-Package pdftex.def Info: images/image07.png used on input line 140.
+Package pdftex.def Info: images/image07.png used on input line 143.
 (pdftex.def)             Requested size: 95.39772pt x 95.40546pt.
 
-<images/image01.png, id=146, 32.12pt x 32.12pt>
+<images/image01.png, id=148, 32.12pt x 32.12pt>
 File: images/image01.png Graphic file (type png)
  <use images/image01.png>
-Package pdftex.def Info: images/image01.png used on input line 144.
+Package pdftex.def Info: images/image01.png used on input line 147.
 (pdftex.def)             Requested size: 95.39772pt x 95.40546pt.
 
 Underfull \vbox (badness 4378) has occurred while \output is active []
 
  [3 <./images/image02.png (PNG copy)> <./images/image06.png> <./images/image00.
 png>]
-Underfull \hbox (badness 2426) in paragraph at lines 184--187
+Underfull \hbox (badness 2426) in paragraph at lines 187--190
 []\OT1/ptm/m/n/10 NN with Con-vo-lu-tional Lay-ers and Con-trast Nor-mal-iza-ti
 on and
  []
 
 
-Overfull \hbox (7.64174pt too wide) in paragraph at lines 171--189
+Overfull \hbox (7.64174pt too wide) in paragraph at lines 174--192
 [][] 
  []
 
@@ -464,10 +461,10 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-<images/image05.png, id=172, 405.515pt x 268.00125pt>
+<images/image05.png, id=174, 405.515pt x 268.00125pt>
 File: images/image05.png Graphic file (type png)
  <use images/image05.png>
-Package pdftex.def Info: images/image05.png used on input line 222.
+Package pdftex.def Info: images/image05.png used on input line 225.
 (pdftex.def)             Requested size: 317.9892pt x 210.1606pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -494,10 +491,10 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-[5] <image09.jpg, id=185, 903.375pt x 653.44125pt>
+[5] <image09.jpg, id=187, 903.375pt x 653.44125pt>
 File: image09.jpg Graphic file (type jpg)
  <use image09.jpg>
-Package pdftex.def Info: image09.jpg used on input line 242.
+Package pdftex.def Info: image09.jpg used on input line 245.
 (pdftex.def)             Requested size: 317.9892pt x 230.01402pt.
 
 Underfull \vbox (badness 2269) has occurred while \output is active []
@@ -541,16 +538,16 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
  (./nips2013.bbl [8])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
 
 (./nips2013.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `nips2013.out' has not changed.
 (rerunfilecheck)             Checksum: BF3125008A7B10B661FF8E20BF1B3D2E;1690.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
  6919 strings out of 495025
@@ -565,10 +562,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on nips2013.pdf (9 pages, 346374 bytes).
+Output written on nips2013.pdf (9 pages, 347382 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
+ 260 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  59 named destinations out of 1000 (max. 500000)
  243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
