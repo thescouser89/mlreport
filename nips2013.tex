@@ -155,7 +155,7 @@ would move around the picture with a stride of 16 pixels. For each of these wind
 we note whether there is a digit found inside the box or not.
 
 After running the sliding window technique, each window is fed to a convolutional neural network with
-the output as a list indicating if that window has a digit in it, basically creating a binary classifier.
+output a list indicating if that window has a digit in it, basically creating a binary classifier.
 
 However, due to the huge number of "non-digit" windows compared to "have-a-digit" window, it proved to
 be hard to effectively train our network to effectively classify whether a window contains a digit or not.
@@ -192,7 +192,7 @@ trained on complete training set) & 90.89 \\ \hline
 \end{table}
 \end{center}
 
-As shown in Table~\ref{table:algo}, the greatest accuracy jump came from using convolutional layers in the neural network. Indeed, accuracy jumped by almost 10\%, which was an even more dramatic effect than adding ~500k extra training examples (~6\% improvement).
+As shown in Table~\ref{table:algo}, the greatest accuracy jump came from using convolutional layers in the neural network. Indeed, accuracy jumped by almost 10\%, which was an even more dramatic effect than adding ~500k extra training examples ($\sim$6\% improvement). For each of our results, we used 20\% of our data as validation set.
 
 This is not a surprising result since convolutional layers are known to be good at image processing. The layers typically learn features such as contrast and edges. Strangely, however, adding a third or fourth convolutional layer degraded the results. This might be because, given the size of the images, adding extra layers was superfluous.
 
