@@ -41,7 +41,7 @@ University of Toronto\\
 \maketitle
 
 \begin{abstract}
-Detecting and reading text from photographs is a challenging computer vision problem that has garnered a lot of work in recent years. Being able to accurately localize, and recognize arbitrary digits from natural images is hard due to the complex scenes in those images. In this report, we apply convolutional neural networks to learn a unique set of features optimized for this task, and discuss the evolution of our neural network topology to achieve a high accuracy on the validation set. We use over 500,000 labeled digits obtained from the SVHN\cite{svhn} dataset for training. Moreover, we also describe our attempts to localize digits from unconstrained images by using image processing techniques and unsupervised learning.
+Detecting and reading text from photographs is a challenging computer vision problem that has garnered a lot of work in recent years. Being able to accurately localize, and recognize arbitrary digits from natural images is hard due to the complex scenes in those images. In this report, we apply convolutional neural networks to learn a unique set of features optimized for this task, and discuss the evolution of our neural network topology to achieve a high accuracy on the validation set. We use over 500,000 labeled digits obtained from the SVHN\cite{svhn} dataset for training. Moreover, we also describe our attempt to localize digits from unconstrained images by using image processing techniques and unsupervised learning.
 \end{abstract}
 
 \section{Background}
@@ -64,7 +64,7 @@ To facilitate the process of implementing and debugging the digit recognition, t
 \section{Process}
 \subsection{Digit Recognition}
 \subsubsection{Frameworks Used}
-Throughout the project, we use the popular Theano project\cite{theano}, together with Lasagne\cite{lasagne}, numpy, scipy\cite{numpyscipy}, and NoLearn\cite{nolearn} libraries. Most of our experiments are executed using an Amazon Web Services EC2 machine with a GPU to exploit the speed gains of training with the CUDA framework.
+Throughout the project, we use the popular Theano project\cite{theano}, together with Lasagne\cite{lasagne}, numpy, scipy\cite{numpyscipy}, and NoLearn\cite{nolearn} libraries. Most of our experiments are executed using an EC2 machine with a GPU to exploit the speed gains of training with the CUDA framework.
 
 \subsubsection{Basic Neural Network}
 Our first approach is to train a basic Neural Network with two hidden layers with the grayscale images of the train dataset. The nonlinearity activation function used for our hidden layers is the Rectifier\cite{relu}, whereas the output layer uses a softmax layer. The grayscale images are normalized before being used as input. The output layer consists of 10 units, each representing a particular digit. The guessed digit from the Neural Network is determined by the unit with the largest value.
@@ -79,7 +79,7 @@ One of the issues that can be experienced when using deep neural networks is ove
 Another improvement to our Convolutional Neural Network is to employ pre-processing on our images to boost some features that could help our network train faster and better. One of the most used techniques is the Local Contrast Normalization, which is applied to each of the three color channels of the images.
 
 \subsubsection{Augmenting the training set}
-Another way to decrease overfitting in our neural network is to simply augment our training set. To achieve this, we use the extra set (~500k images) available from the SVHN dataset to augment our initial training set of ~ 73k images. We also tried to increase our dataset by adding noise and slightly rotating our existing training set to produce more data.
+Another way to decrease overfitting in our neural network is to simply augment our training set. To achieve this, we use the extra set ($\sim$ 500k images) available from the SVHN dataset to augment our initial training set of $\sim$ 73k images. We also tried to increase our dataset by adding noise and slightly rotating our existing training set to produce more data.
 
 \subsection{Image Segmentation}
 The unsegmented data set contains images of houses' address plates at different levels of zoom of zoom and isolation. Moreover, the number of digits that a given image contains is also unknown. Consequently, separating each individual digit is far from trivial.
@@ -87,10 +87,10 @@ The unsegmented data set contains images of houses' address plates at different 
 Here, the problems of segmentation and recognition were considered independently. That is, for simplicity, the recognition algorithm was developped using Format 2 data (32x32 images, single digits). The segmentation algorithm simply generates Format 2 data from the Format 1 data (png images, multiple digits).
 
 \subsubsection{Process}
-For this project, an algorithm loosely inspired on MATLAB's OCR example\cite{automaticdetect} was written. Unfortunately, all attempts to leverage machine learning techiques in this parst of this algorithm have performed worse than hardcoding decisions (more on that in the results section).
+For this project, an algorithm loosely inspired on MATLAB's OCR example\cite{automaticdetect} was written. Unfortunately, all attempts to leverage machine learning techniques in this part of this algorithm has performed worse than hardcoding decisions (more on that in the results section).
 
 \subsubsection{MATLAB Algorithm}
-First, the images are preprocessed: they are resized to a height of 200 pixels (while keeping the aspect ratio the same) and converted to grayscale.
+First, the images are preprocessed: they are resized to a height of 200 pixels while keeping the aspect ratio the same and converted to grayscale.
 
 \begin{figure}[!htb]
 \minipage{0.32\textwidth}
@@ -127,7 +127,7 @@ Depending on the image, this preliminary analysis can produce a lot of possibili
 \endminipage\hfill
 \end{figure}
 
-The third step is to detect the number of digits present in the previously found area and split them (basically, do the horizontal cropping). For that, the image is turned into binary (black and white) using Otsu’s thresholding method\cite{otsu1975threshold,graythresh}. Then, after inverting the image if the background is white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Figure~\ref{fig:thres} \& ~\ref{fig:split}).
+The third step is to detect the number of digits present in the previously found area and split them (basically, do the horizontal cropping). For that, the image is turned into binary (black and white) using Otsu’s thresholding method\cite{otsu1975threshold,graythresh} . Then, after inverting the image if the background is white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Figure~\ref{fig:thres} \& ~\ref{fig:split}).
 
 
 \begin{figure}
@@ -147,8 +147,21 @@ The third step is to detect the number of digits present in the previously found
 \label{fig:output}
 \end{figure}
 
-Finally, the split zones are, again, filtered by width and cropped into 32x32 pixels images (extending laterally to get a 1:1 aspect ratio, if necessary) to match the conventions of Format 2 (Figure ~\ref{fig:split} \& ~\ref{fig:output}). 
+Finally, the split zones are, again, filtered by width and cropped into 32x32 pixels images (extending laterally to get a 1:1 aspect ratio, if necessary) to match the conventions of Format 2 (Figure ~\ref{fig:split} \& ~\ref{fig:output}).
 
+\subsubsection{Sliding Window Approach}
+We also attempted to use a sliding window approach, where a window of size 32x32
+would move around the picture with a stride of 16 pixels. For each of these windows,
+we note whether there is a digit found inside the box or not.
+
+After running the sliding window technique, each window is fed to a convolutional neural network with
+the output as a list indicating if that window has a digit in it, basically creating a binary classifier.
+
+However, due to the huge number of "non-digit" windows compared to "have-a-digit" window, it proved to
+be hard to effectively train our network to effectively classify whether a window contains a digit or not.
+
+Moreover we suffered from scaling window issues where sometimes the window size we chose was too big for a
+particular image and captures several digits, or the window size was too small and only a tiny section of the digit was obtained.
 
 \section{Experimental Results}
 \subsection{Digit Recognition}
@@ -185,7 +198,6 @@ This is not a surprising result since convolutional layers are known to be good 
 
 On the other hand, adding contrast normalization had very little effect on the accuracy. It’s possible that the lack of contrast in the original image was just compensated by some weights being higher (more “sensitive” contrast thresholds). When processing the images with improved contrast, the network would just have learned to be less sensitive while learning the same features. This makes sense; increasing contrast only “boosts” information already present in the image at the first place\cite{lenet5}.
 
-The next thing that greatly improved the results was to augment the training set with some examples taken from the “extras” set. This confirms the general intuition that “more data is better”. Figure~\ref{fig:accuracy} and Table~\ref{table:train} show the accuracies obtained with different numbers of training examples after 10 epochs.
 
 \begin{center}
 	\begin{table}[!h]
@@ -213,9 +225,12 @@ The next thing that greatly improved the results was to augment the training set
 \end{figure}
 \end{center}
 
+
+The next thing that greatly improved the results was to augment the training set with some examples taken from the “extras” set. This confirms the general intuition that “more data is better”.  Figure~\ref{fig:accuracy} and Table~\ref{table:train} show the accuracies obtained with different numbers of training examples after 10 epochs.
+
 \subsection{Image Segmentation}
 
-It is important to point out that the digit segmentation algorithm is mostly an engineered solution (in that it doesn't learn from the data); it just applies decisions based on hard-coded thresholds, gradients and masking.
+It is important to point out that the digit segmentation algorithm is mostly an engineered solution (in that it doesn’t learn from the data); it just applies decisions based on hard-coded thresholds, gradients and masking.
 
 This is because this engineered solution systematically performed better than the machine learning techniques we used and that any attempt to integrate machine learning algorithms degraded the results. Below are a few of the techniques that were tried but later abandoned.
 
@@ -231,7 +246,7 @@ An attempt to use a more advanced edge detection algorithm, P. Isola et. al.’s
 \end{center}
 
 \subsubsection{PCA for Segmentation}
-In order to make the separation of the digits easier, an attempt was made to use PCA to generate the histogram in Fig. 4 (and to rectify the image when the address was diagonal). This, for instance, would have made it easier to separate numbers that are placed in diagonal because it would have been rotated to an horizontal orientation (the current algorithm tends to fail at this task because of the vertical overlap between the numbers). However, this approach was abandoned because it also had major adverse effects, such as a tendency to flip the image vertically or horizontally, that made it perform worse than a simple count of white pixels.
+In order to make the separation of the digits easier, an attempt was made to use PCA to generate the histogram in Fig. 4 (and to rectify the image when the address was diagonal). This, for instance, would have made it easier to separate numbers that are placed in diagonal because it would have been rotated to an horizontal orientation (the current algorithm tends to fail at this task because of the vertical overlap between the numbers). However, this approach was abandoned because it also had major adverse effects, such as a tendency to flip the image vertically or horizontally that made it perform worse than a simple count of white pixels.
 
 \subsubsection{k-Means for Segmentation}
 Further, k-Means was tried as a way to locate the centers of the digits. The white pixel count was be used to guess a value for k and, then, the image was split using the centroids found by k-Means on the thresholded image. This caused more errors than a simple split however, because, even if the number of digits found was correct, the centroids were sometimes distributed vertically (i.e. two centroids on the same number) instead of all horizontally. Forcing the k-Means to be only horizontal produced slightly better results but was still not as good as a simple split because it was sensitive to noise (address plate edges) and weight distributions in the digits (a “5” typically has a centroid in its upper-left portion, for instance).
