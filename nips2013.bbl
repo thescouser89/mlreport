@@ -41,6 +41,12 @@ Yann Lecun.
 \newblock Lenet-5, convolutional neural networks.
 \newblock \url{http://yann.lecun.com/exdb/lenet/}.
 
+\bibitem{relu}
+Vinod Nair and Geoffrey~E Hinton.
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In {\em Proceedings of the 27th International Conference on Machine
+  Learning (ICML-10)}, pages 807--814, 2010.
+
 \bibitem{svhn}
 Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo~Wu, and Andrew~Y
   Ng.
@@ -59,6 +65,13 @@ Pierre Sermanet, Soumith Chintala, and Yann LeCun.
   classification.
 \newblock In {\em Pattern Recognition (ICPR), 2012 21st International
   Conference on}, pages 3288--3291. IEEE, 2012.
+
+\bibitem{dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
+  2014.
 
 \bibitem{numpyscipy}
 Stefan Van Der~Walt, S~Chris Colbert, and Gael Varoquaux.

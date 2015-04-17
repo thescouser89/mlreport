@@ -18,12 +18,14 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{svhn}
 \citation{lecun_convolutional_svhn}
+\citation{dropout}
 \citation{svhn}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Background}{1}{section.1}}
 \citation{theano}
 \citation{lasagne}
 \citation{numpyscipy}
 \citation{nolearn}
+\citation{relu}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Problem Description}{2}{section.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Process}{2}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Digit Recognition}{2}{subsection.3.1}}
@@ -31,11 +33,11 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Basic Neural Network}{2}{subsubsection.3.1.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Convolutional Neural Network (CNN)}{2}{subsubsection.3.1.3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}Improvement to CNN}{2}{subsubsection.3.1.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Augmenting the training set}{2}{subsubsection.3.1.5}}
 \citation{automaticdetect}
 \citation{coates2011text}
 \citation{otsu1975threshold}
 \citation{graythresh}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Augmenting the training set}{3}{subsubsection.3.1.5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Image Segmentation}{3}{subsection.3.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Original Image (2200.png in training set)\relax }}{3}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
@@ -44,26 +46,32 @@
 \newlabel{fig:vertical}{{2}{3}{Vertical Edges (Sobel vert. edge detection)\relax }{figure.caption.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Mask obtained by morphological closing, after filtering\relax }}{3}{figure.caption.1}}
 \newlabel{fig:mask}{{3}{3}{Mask obtained by morphological closing, after filtering\relax }{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Digit splitting based on ## of white pixels per column. The red line is the threshold.\relax }}{3}{figure.caption.2}}
+\newlabel{fig:thres}{{4}{3}{Digit splitting based on ## of white pixels per column. The red line is the threshold.\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Split Zones. Leftmost zone was discarded because of its small width\relax }}{3}{figure.caption.2}}
+\newlabel{fig:split}{{5}{3}{Split Zones. Leftmost zone was discarded because of its small width\relax }{figure.caption.2}{}}
 \citation{lenet5}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Digit splitting based on ## of white pixels per column. The red line is the threshold.\relax }}{4}{figure.caption.2}}
-\newlabel{fig:thres}{{4}{4}{Digit splitting based on ## of white pixels per column. The red line is the threshold.\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Split Zones. Leftmost zone was discarded because of its small width\relax }}{4}{figure.caption.2}}
-\newlabel{fig:split}{{5}{4}{Split Zones. Leftmost zone was discarded because of its small width\relax }{figure.caption.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Final Output\relax }}{4}{figure.caption.3}}
 \newlabel{fig:output}{{6}{4}{Final Output\relax }{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Results}{4}{section.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Digit Recognition}{4}{subsection.4.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Algorithm and Accuracy\relax }}{4}{table.caption.4}}
+\newlabel{table:algo}{{1}{4}{Algorithm and Accuracy\relax }{table.caption.4}{}}
 \citation{isola2014crisp}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Accuracy vs. Training Examples. (2 convolutional layers, 24 and 32 filters and max-pooling 1 hidden layer, 300 units)\relax }}{5}{figure.caption.4}}
-\newlabel{fig:accuracy}{{7}{5}{Accuracy vs. Training Examples. (2 convolutional layers, 24 and 32 filters and max-pooling 1 hidden layer, 300 units)\relax }{figure.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Accuracy vs Training Examples\relax }}{5}{table.caption.5}}
+\newlabel{table:train}{{2}{5}{Accuracy vs Training Examples\relax }{table.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Accuracy vs. Training Examples. (2 convolutional layers, 24 and 32 filters and max-pooling 1 hidden layer, 300 units)\relax }}{5}{figure.caption.6}}
+\newlabel{fig:accuracy}{{7}{5}{Accuracy vs. Training Examples. (2 convolutional layers, 24 and 32 filters and max-pooling 1 hidden layer, 300 units)\relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Image Segmentation}{5}{subsection.4.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Better Boundaries}{5}{subsubsection.4.2.1}}
+\citation{dean2012large}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}PCA for Segmentation}{6}{subsubsection.4.2.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}kNN for Segmentation}{6}{subsubsection.4.2.3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}Results}{6}{subsubsection.4.2.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Examples vs Accuracy for Image Segmentation\relax }}{6}{table.caption.7}}
+\newlabel{table:segmentation}{{3}{6}{Examples vs Accuracy for Image Segmentation\relax }{table.caption.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Discussion and Conclusion}{6}{section.5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Scaling with Millions of Examples}{6}{subsection.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Digit Recognition}{6}{subsection.5.2}}
 \bibstyle{plain}
 \bibdata{ml}
 \bibcite{automaticdetect}{1}
@@ -74,8 +82,11 @@
 \bibcite{coates2011text}{6}
 \bibcite{isola2014crisp}{7}
 \bibcite{lenet5}{8}
-\bibcite{svhn}{9}
-\bibcite{otsu1975threshold}{10}
-\bibcite{lecun_convolutional_svhn}{11}
-\bibcite{numpyscipy}{12}
+\bibcite{relu}{9}
+\bibcite{svhn}{10}
+\bibcite{otsu1975threshold}{11}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Digit Recognition}{7}{subsection.5.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Image Segmentation}{7}{subsection.5.3}}
+\bibcite{lecun_convolutional_svhn}{12}
+\bibcite{dropout}{13}
+\bibcite{numpyscipy}{14}
