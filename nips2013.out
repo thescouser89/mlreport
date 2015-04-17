@@ -13,7 +13,7 @@
 \BOOKMARK [2][-]{subsection.4.2}{Image Segmentation}{section.4}% 13
 \BOOKMARK [3][-]{subsubsection.4.2.1}{Better Boundaries}{subsection.4.2}% 14
 \BOOKMARK [3][-]{subsubsection.4.2.2}{PCA for Segmentation}{subsection.4.2}% 15
-\BOOKMARK [3][-]{subsubsection.4.2.3}{kNN for Segmentation}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.3}{k-Means for Segmentation}{subsection.4.2}% 16
 \BOOKMARK [3][-]{subsubsection.4.2.4}{Results}{subsection.4.2}% 17
 \BOOKMARK [1][-]{section.5}{Discussion and Conclusion}{}% 18
 \BOOKMARK [2][-]{subsection.5.1}{Scaling with Millions of Examples}{section.5}% 19
