@@ -84,8 +84,12 @@ Another way to decrease overfitting in our neural network is to simply augment o
 \subsection{Image Segmentation}
 The unsegmented data set contains images of houses' address plates at different levels of zoom of zoom and isolation. Moreover, the number of digits that a given image contains is also unknown. Consequently, separating each individual digit is far from trivial.
 
-For this project, an algorithm loosely inspired on MATLAB's OCR example\cite{automaticdetect}. Unfortunately, all attempts to leverage machine learning techiques in this parst of this algorithm has performed worse than hardcoding decisions (more on that in the results section).
+Here, the problems of segmentation and recognition were considered independently. That is, for simplicity, the recognition algorithm was developped using Format 2 data (32x32 images, single digits). The segmentation algorithm simply generates Format 2 data from the Format 1 data (png images, multiple digits).
 
+\subsubsection{Process}
+For this project, an algorithm loosely inspired on MATLAB's OCR example\cite{automaticdetect} was written. Unfortunately, all attempts to leverage machine learning techiques in this parst of this algorithm has performed worse than hardcoding decisions (more on that in the results section).
+
+\subsubsection{MATLAB Algorithm}
 First, the images are preprocessed: they are resized to a height of 200 pixels while keeping the aspect ratio the same and converted to grayscale.
 
 \begin{figure}[!htb]
@@ -108,7 +112,7 @@ First, the images are preprocessed: they are resized to a height of 200 pixels w
 
 The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.'s "detection"\cite{coates2011text}). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (which are very scattered) to create connected regions. These connected regions are then enclosed in the smallest box that can contain them completely. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit (Figure~\ref{fig:vertical} \& ~\ref{fig:mask}). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions.
 
-Depending on the image, this preliminary analysis can produce a lot of possibilities. To solve this problem, the candidate connected zones are filtered by size, aspect ratio and solidity. Areas that are too narrow, fat or have a low solidity (level of vertical gradients in a box containing the connected zone) are discarded. The zone that has the greatest probability of containing a digit is then passed to the next step.
+Depending on the image, this preliminary analysis can produce a lot of possibilities. To solve this problem, the candidate connected zones are filtered by size, aspect ratio and solidity. Areas that are too narrow, fat or have a low solidity (level of vertical gradients in a box containing the connected zone) are discarded. The zone that has the greatest probability of containing a digit is then passed to the next step. In other words, this second step finds the scale of the numbers in the image because it effectively does the vertical cropping.
 
 \begin{figure}[!htb]
 \minipage{0.45\textwidth}
@@ -123,7 +127,7 @@ Depending on the image, this preliminary analysis can produce a lot of possibili
 \endminipage\hfill
 \end{figure}
 
-The third step is to detect the number of digits present in the previously found area. For that, the image is turned into binary (black and white) using Otsu’s thresholding method\cite{otsu1975threshold,graythresh} . Then, after inverting the image if the background is white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Figure~\ref{fig:thres} \& ~\ref{fig:split}).
+The third step is to detect the number of digits present in the previously found area and split them (basically, do the horizontal cropping). For that, the image is turned into binary (black and white) using Otsu’s thresholding method\cite{otsu1975threshold,graythresh} . Then, after inverting the image if the background is white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Figure~\ref{fig:thres} \& ~\ref{fig:split}).
 
 
 \begin{figure}
@@ -143,7 +147,7 @@ The third step is to detect the number of digits present in the previously found
 \label{fig:output}
 \end{figure}
 
-Finally, the split zones are, again, filtered by width and cropped into 32x32 pixels images (extending laterally to get a 1:1 aspect ratio, if necessary) (Figure~\ref{fig:split} \& ~\ref{fig:output}).
+Finally, the split zones are, again, filtered by width and cropped into 32x32 pixels images (extending laterally to get a 1:1 aspect ratio, if necessary) to match the conventions of Format 2 (Figure ~\ref{fig:split} \& ~\ref{fig:output}). 
 
 
 \section{Experimental Results}
