@@ -3,44 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: nips2013.aux
 The style file: plain.bst
 Database file #1: ml.bib
-You've used 2 entries,
+Warning--to sort, need author or key in lasagne
+Warning--to sort, need author or key in nolearn
+Warning--can't use both volume and number fields in svhn
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            508 strings with 4415 characters,
-and the built_in function-call counts, 875 in all, are:
-= -- 83
-> -- 50
-< -- 1
-+ -- 20
-- -- 18
-* -- 57
-:= -- 143
-add.period$ -- 7
-call.type$ -- 2
-change.case$ -- 15
+            522 strings with 4907 characters,
+and the built_in function-call counts, 1582 in all, are:
+= -- 141
+> -- 96
+< -- 2
++ -- 40
+- -- 34
+* -- 116
+:= -- 256
+add.period$ -- 14
+call.type$ -- 5
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 30
-empty$ -- 64
-format.name$ -- 18
-if$ -- 187
+cite$ -- 8
+duplicate$ -- 49
+empty$ -- 124
+format.name$ -- 34
+if$ -- 331
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 1
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 22
+int.to.str$ -- 5
+missing$ -- 2
+newline$ -- 26
+num.names$ -- 6
+pop$ -- 46
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 27
 quote$ -- 0
-skip$ -- 26
+skip$ -- 39
 stack$ -- 0
-substring$ -- 42
-swap$ -- 12
-text.length$ -- 1
+substring$ -- 47
+swap$ -- 11
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
-warning$ -- 0
-while$ -- 7
-width$ -- 3
-write$ -- 23
+type$ -- 20
+warning$ -- 3
+while$ -- 9
+width$ -- 6
+write$ -- 50
+(There were 3 warnings)

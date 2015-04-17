@@ -1,16 +1,30 @@
 \begin{thebibliography}{1}
 
-\bibitem{coates2011text}
-Adam Coates, Blake Carpenter, Carl Case, Sanjeev Satheesh, Bipin Suresh, Tao
-  Wang, David~J Wu, and Andrew~Y Ng.
-\newblock Text detection and character recognition in scene images with
-  unsupervised feature learning.
-\newblock In {\em Document Analysis and Recognition (ICDAR), 2011 International
-  Conference on}, pages 440--445. IEEE, 2011.
+\bibitem{lasagne}
+Neural network tools for theano.
+\newblock \url{https://github.com/Lasagne/Lasagne}.
 
-\bibitem{lenet5}
-Yann Lecun.
-\newblock Lenet-5, convolutional neural networks.
-\newblock \url{http://yann.lecun.com/exdb/lenet/}.
+\bibitem{nolearn}
+scikit-learn compatible wrappers for neural net libraries.
+\newblock \url{http://pythonhosted.org/nolearn/}.
+
+\bibitem{theano}
+Fr{\'{e}}d{\'{e}}ric Bastien, Pascal Lamblin, Razvan Pascanu, James Bergstra,
+  Ian~J. Goodfellow, Arnaud Bergeron, Nicolas Bouchard, and Yoshua Bengio.
+\newblock Theano: new features and speed improvements.
+\newblock Deep Learning and Unsupervised Feature Learning NIPS 2012 Workshop,
+  2012.
+
+\bibitem{svhn}
+Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo~Wu, and Andrew~Y
+  Ng.
+\newblock Reading digits in natural images with unsupervised feature learning.
+\newblock In {\em NIPS workshop on deep learning and unsupervised feature
+  learning}, volume 2011, page~5. Granada, Spain, 2011.
+
+\bibitem{numpyscipy}
+Stefan Van Der~Walt, S~Chris Colbert, and Gael Varoquaux.
+\newblock The numpy array: a structure for efficient numerical computation.
+\newblock {\em Computing in Science \& Engineering}, 13(2):22--30, 2011.
 
 \end{thebibliography}

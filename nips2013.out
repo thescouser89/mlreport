@@ -1,10 +1,23 @@
 \BOOKMARK [1][-]{section.1}{Background}{}% 1
-\BOOKMARK [1][-]{section.2}{Problem Description}{}% 2
-\BOOKMARK [1][-]{section.3}{Process}{}% 3
-\BOOKMARK [1][-]{section.4}{Citations, figures, tables, references}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Citations within the text}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Footnotes}{section.4}% 6
-\BOOKMARK [2][-]{subsection.4.3}{Figures}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.4}{Tables}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Final instructions}{}% 9
-\BOOKMARK [2][-]{subsection.5.1}{Margins in LaTeX}{section.5}% 10
+\BOOKMARK [1][-]{section.2}{Process}{}% 2
+\BOOKMARK [1][-]{section.3}{Problem Description}{}% 3
+\BOOKMARK [1][-]{section.4}{Process}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Digit Recognition}{section.4}% 5
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Frameworks Used}{subsection.4.1}% 6
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Basic Neural Network}{subsection.4.1}% 7
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Convolutional Neural Network \(CNN\)}{subsection.4.1}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Improvement to CNN}{subsection.4.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.1.5}{Augmenting the training set}{subsection.4.1}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Image Segmentation}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Experimental Results}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Digit Recognition}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Image Segmentation}{section.5}% 14
+\BOOKMARK [1][-]{section.6}{Discussion and Conclusion}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Scaling with Millions of Examples}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.2}{Digit Recognition}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.3}{Image Segmentation}{section.6}% 18
+\BOOKMARK [1][-]{section.7}{Citations, figures, tables, references}{}% 19
+\BOOKMARK [2][-]{subsection.7.1}{Citations within the text}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.2}{Footnotes}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.3}{Figures}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.4}{Tables}{section.7}% 23
