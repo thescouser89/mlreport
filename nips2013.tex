@@ -2,6 +2,8 @@
 \usepackage{nips13submit_e,times}
 \usepackage{hyperref}
 \usepackage{url}
+\usepackage{graphicx}
+\usepackage{subcaption}
 %\documentstyle[nips13submit_09,times,art10]{article} % For LaTeX 2.09
 
 
@@ -43,7 +45,7 @@ Detecting and reading text from photographs is a challenging computer vision pro
 \end{abstract}
 
 \section{Background}
-Convolutional neural networks {citation needed} are biologically-inspired neural networks that uses identical copies of the same neuron for training, allowing the network to have a large number of units while keeping the number of parameters of those neurons small. The individual neurons are generally connected to filtered overlapping regions of the image. Those convolutional layers are connected to pooling layers. One popular choice for this kind of layer is the max-pooling layer, which extracts the maximum of features over small blocks of the previous layer.
+Convolutional neural networks\cite{lecun_convolutional_svhn} are biologically-inspired neural networks that uses identical copies of the same neuron for training, allowing the network to have a large number of units while keeping the number of parameters of those neurons small. The individual neurons are generally connected to filtered overlapping regions of the image. The convolutional layers are connected to pooling layers to reduce dimensionality. One popular choice for this kind of layer is the max-pooling layer, which extracts the maximum of features over small blocks of the previous layer.
 
 Generally 2D convolutional neural networks are used in computer vision to learn features for extraction information. The 2D layer will look at patches of images to generate features such as the detection of the presence of an edge, or a particular texture.
 
@@ -90,13 +92,63 @@ Accordingly, here, we wrote an algorithm loosely inspired on MATLAB ocr example.
 
 First, the images are preprocessed: they are resized to a height of 200 pixels while keeping the aspect ratio the same and converted to grayscale.
 
-The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.’s “detection”). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (very scattered) to create connected regions. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit (Figs.2 \& 3). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions. 
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{images/image02}
+  \caption{Original Image (2200.png in training set)}
+  \label{fig:orig}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{images/image06}
+  \caption{Vertical Edges (Sobel vert. edge detection)}
+  \label{fig:vertical}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{images/image00}
+  \caption{Mask obtained by morphological closing, after filtering}
+  \label{fig:mask}
+\endminipage
+\end{figure}
+
+The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.’s “detection”). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (very scattered) to create connected regions. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit %(Figs.\ref{fig:vertical} \& \ref{fig:mask}). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions. 
 
 Depending on the image, this preliminary analysis can produce a lot of possibilities. To solve this problem, the candidate connected zones are filtered by size, aspect ratio and solidity. Areas that are too narrow, fat or have a low solidity (level of vertical gradients in a box containing the connected zone) are discarded. The zone that has the greatest probability of containing a digit is then passed to the next step.
 
-The third step is to detect the number of digits present in the previously found area. For that, the image is turned into binary (black and white) using Otsu’s [thresholding] method . Then, the after inverting the image if the background was white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Figs. 4 \& 5).
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{images/image08}
+  \caption{Digit splitting based on # of white pixels per column. The red line is the threshold.}
+  \label{fig:thres}
+\endminipage\hfill
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{images/image04}
+  \caption{Split Zones. Leftmost zone was discarded because of its small width}
+  \label{fig:split}
+\endminipage\hfill
+\end{figure}
 
-Finally, the split zones are, again, filtered by width and cropped into 32x32 pixels images (extending laterally to get a 1:1 aspect ratio, if necessary) (Figs. 5 \& 6).
+The third step is to detect the number of digits present in the previously found area. For that, the image is turned into binary (black and white) using Otsu’s [thresholding] method . Then, the after inverting the image if the background was white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Fig\ref{fig:thres} \& \ref{fig:split}).
+
+
+\begin{figure}
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/image03}
+\end{subfigure}%
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/image07}
+\end{subfigure}
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/image01}
+\end{subfigure}
+\caption{Final Output}
+\label{fig:output}
+\end{figure}
+
+Finally, the split zones are, again, filtered by width and cropped into 32x32 pixels images (extending laterally to get a 1:1 aspect ratio, if necessary) (Fig\ref{fig:split} \& \ref{fig:output}).
+
 
 
 \section{Experimental Results}

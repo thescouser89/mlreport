@@ -22,6 +22,13 @@ Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo~Wu, and Andrew~Y
 \newblock In {\em NIPS workshop on deep learning and unsupervised feature
   learning}, volume 2011, page~5. Granada, Spain, 2011.
 
+\bibitem{lecun_convolutional_svhn}
+Pierre Sermanet, Soumith Chintala, and Yann LeCun.
+\newblock Convolutional neural networks applied to house numbers digit
+  classification.
+\newblock In {\em Pattern Recognition (ICPR), 2012 21st International
+  Conference on}, pages 3288--3291. IEEE, 2012.
+
 \bibitem{numpyscipy}
 Stefan Van Der~Walt, S~Chris Colbert, and Gael Varoquaux.
 \newblock The numpy array: a structure for efficient numerical computation.
