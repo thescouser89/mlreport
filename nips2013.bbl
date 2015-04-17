@@ -15,6 +15,11 @@ Fr{\'{e}}d{\'{e}}ric Bastien, Pascal Lamblin, Razvan Pascanu, James Bergstra,
 \newblock Deep Learning and Unsupervised Feature Learning NIPS 2012 Workshop,
   2012.
 
+\bibitem{isola2014crisp}
+Phillip Isola, Daniel Zoran, Dilip Krishnan, and Edward~H Adelson.
+\newblock Crisp boundary detection using pointwise mutual information.
+\newblock In {\em Computer Vision--ECCV 2014}, pages 799--814. Springer, 2014.
+
 \bibitem{svhn}
 Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo~Wu, and Andrew~Y
   Ng.

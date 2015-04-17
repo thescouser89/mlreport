@@ -11,12 +11,11 @@
 \BOOKMARK [1][-]{section.4}{Experimental Results}{}% 11
 \BOOKMARK [2][-]{subsection.4.1}{Digit Recognition}{section.4}% 12
 \BOOKMARK [2][-]{subsection.4.2}{Image Segmentation}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Discussion and Conclusion}{}% 14
-\BOOKMARK [2][-]{subsection.5.1}{Scaling with Millions of Examples}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{Digit Recognition}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Image Segmentation}{section.5}% 17
-\BOOKMARK [1][-]{section.6}{Citations, figures, tables, references}{}% 18
-\BOOKMARK [2][-]{subsection.6.1}{Citations within the text}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.2}{Footnotes}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.3}{Figures}{section.6}% 21
-\BOOKMARK [2][-]{subsection.6.4}{Tables}{section.6}% 22
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Better Boundaries}{subsection.4.2}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.2}{PCA for Segmentation}{subsection.4.2}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.3}{kNN for Segmentation}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Results}{subsection.4.2}% 17
+\BOOKMARK [1][-]{section.5}{Discussion and Conclusion}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Scaling with Millions of Examples}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Digit Recognition}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.3}{Image Segmentation}{section.5}% 21
