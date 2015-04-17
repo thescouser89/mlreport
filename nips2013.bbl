@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{coates2011text}
+Adam Coates, Blake Carpenter, Carl Case, Sanjeev Satheesh, Bipin Suresh, Tao
+  Wang, David~J Wu, and Andrew~Y Ng.
+\newblock Text detection and character recognition in scene images with
+  unsupervised feature learning.
+\newblock In {\em Document Analysis and Recognition (ICDAR), 2011 International
+  Conference on}, pages 440--445. IEEE, 2011.
+
+\bibitem{lenet5}
+Yann Lecun.
+\newblock Lenet-5, convolutional neural networks.
+\newblock \url{http://yann.lecun.com/exdb/lenet/}.
+
+\end{thebibliography}
