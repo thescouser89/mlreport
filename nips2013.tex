@@ -88,7 +88,7 @@ The unsegmented data set contains images of houses’ address plates at differen
 
 One approach could have been to randomly take squares from the image and train a classifier to decide whether it contains a digit or not. This could have worked rather well if the goal was just to find digits in an image. However, for segmentation (one image per digit, centered), its performance would have been random at best. Since, to properly decode an address, the information contained in the number of digits and their order is as important as the digits themselves, this approach was rejected.
 
-Accordingly, here, we wrote an algorithm loosely inspired on MATLAB ocr example. It can be found attached to this document.
+Accordingly, here, we wrote an algorithm loosely inspired on MATLAB ocr example\cite{automaticdetect}. It can be found attached to this document.
 
 First, the images are preprocessed: they are resized to a height of 200 pixels while keeping the aspect ratio the same and converted to grayscale.
 
@@ -110,7 +110,7 @@ First, the images are preprocessed: they are resized to a height of 200 pixels w
 \endminipage
 \end{figure}
 
-The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.’s “detection”). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (very scattered) to create connected regions. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit %(Figs.\ref{fig:vertical} \& \ref{fig:mask}). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions. 
+The second step is to find the areas of the image that have a high probability of containing text (an approach similar to that of A. Coates et. al.’s “detection”\cite{coates2011text}). For that, we apply a sobel vertical edge detection algorithm and, then, morphological closing on the found edges (very scattered) to create connected regions. This worked well because the vertical boundaries in numbers tend to create a rectangular blob of points that, when morphologically closed, completely contains the digit (Figs.\ref{fig:vertical} \& \ref{fig:mask}). Vertical edges such as the wall, in this example, get filtered easily because, after closing, they create really narrow regions. 
 
 Depending on the image, this preliminary analysis can produce a lot of possibilities. To solve this problem, the candidate connected zones are filtered by size, aspect ratio and solidity. Areas that are too narrow, fat or have a low solidity (level of vertical gradients in a box containing the connected zone) are discarded. The zone that has the greatest probability of containing a digit is then passed to the next step.
 
@@ -127,7 +127,7 @@ Depending on the image, this preliminary analysis can produce a lot of possibili
 \endminipage\hfill
 \end{figure}
 
-The third step is to detect the number of digits present in the previously found area. For that, the image is turned into binary (black and white) using Otsu’s [thresholding] method . Then, the after inverting the image if the background was white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Fig\ref{fig:thres} \& \ref{fig:split}).
+The third step is to detect the number of digits present in the previously found area. For that, the image is turned into binary (black and white) using Otsu’s [thresholding] method\cite{otsu1975threshold,graythresh} . Then, the after inverting the image if the background was white, the number of white pixels in each column (assumed to be the digit) is counted. If it falls below a threshold (that is a function of the maximum number of white pixels in the image’s column), a split point is saved (see Fig\ref{fig:thres} \& \ref{fig:split}).
 
 
 \begin{figure}
@@ -153,6 +153,44 @@ Finally, the split zones are, again, filtered by width and cropped into 32x32 pi
 
 \section{Experimental Results}
 \subsection{Digit Recognition}
+
+\begin{center}
+  \begin{tabular}{ | p{10cm} || c ||}
+    \hline
+    Algorithm & Validation Accuracy \% \\ \hline \hline
+    NN with Regular Hidden layers (1 hidden layer, 300 units
+trained on complete training set) & 79.43 \\ \hline
+NN with Convolutional Layers
+(2 convolutional layers, 24 and 32 filters and max-pooling
+1 hidden layer, 300 units
+trained on complete training set) & 89.37 \\ \hline
+NN with Convolutional Layers and Contrast Normalization
+(2 convolutional layers, 24 and 32 filters and max-pooling
+1 hidden layer, 300 units
+trained on complete training set) & 90.15 \\ \hline
+NN with Convolutional Layers and Contrast Normalization and Dropout
+(2 convolutional layers, 24 and 32 filters and max-pooling
+1 hidden layer, 300 units, dropout layer
+trained on complete training set) & 90.89 \\ \hline
+  \end{tabular}
+\end{center}
+
+The greatest accuracy jump came from using convolutional layers in the neural network. Indeed, accuracy jumped by almost 10\%, which was an even more dramatic effect than adding ~500k extra training examples (~6\% improvement).
+
+This is not a surprising result since convolutional layers are known to be good at image processing. Strangely, however, adding a third or fourth convolutional layer degraded the results. This might be because, given the size of the images, adding extra layers was superfluous.
+
+On the other hand, adding contrast normalization had very little effect on the accuracy. It’s possible that the lack of contrast in the original image was just compensated by some weights being higher (more “sensitive” contrast thresholds). When processing the images with improved contrast, the network would just have learned to be less sensitive while learning the same features. This makes sense; increasing contrast only “boosts” information already present in the image at the first place\cite{lenet5}.
+
+\begin{center}
+\begin{figure}[!htb]
+  \includegraphics[width=0.8\linewidth]{images/image05}
+  \caption{Accuracy vs. Training Examples. (2 convolutional layers, 24 and 32 filters and max-pooling 1 hidden layer, 300 units)}
+  \label{fig:accuracy}
+\end{figure}
+\end{center}
+
+
+The next thing that greatly improved the results was to augment the training set with some examples taken from the “extras” set. This confirms the general intuition that “more data is better”.  Below are the accuracies obtained with different numbers of training examples after 10 epochs:
 \subsection{Image Segmentation}
 
 It is important to point out that the digit segmentation algorithm is mostly an engineered solution (in that it doesn’t learn from the data); it just applies decisions based on hard-coded thresholds, gradients and masking.
