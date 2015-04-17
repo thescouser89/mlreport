@@ -31,6 +31,19 @@ Adam Coates, Blake Carpenter, Carl Case, Sanjeev Satheesh, Bipin Suresh, Tao
 \newblock In {\em Document Analysis and Recognition (ICDAR), 2011 International
   Conference on}, pages 440--445. IEEE, 2011.
 
+\bibitem{dean2012large}
+Jeffrey Dean, Greg Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Mark Mao,
+  Andrew Senior, Paul Tucker, Ke~Yang, Quoc~V Le, et~al.
+\newblock Large scale distributed deep networks.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1223--1231, 2012.
+
+\bibitem{maxout}
+Ian~J Goodfellow, David Warde-Farley, Mehdi Mirza, Aaron Courville, and Yoshua
+  Bengio.
+\newblock Maxout networks.
+\newblock {\em arXiv preprint arXiv:1302.4389}, 2013.
+
 \bibitem{isola2014crisp}
 Phillip Isola, Daniel Zoran, Dilip Krishnan, and Edward~H Adelson.
 \newblock Crisp boundary detection using pointwise mutual information.

@@ -185,21 +185,21 @@ On the other hand, adding contrast normalization had very little effect on the a
 
 
 \begin{center}
-\begin{table}[!h]
-  \begin{tabular}{ | l || c ||}
-    \hline
-    \# of training examples & Accuracy \% \\ \hline \hline
-    73,257 (just the training set) & 89.28 \\ \hline
-    100,000 & 93.74 \\ \hline
-    200,000 & 95.06 \\ \hline
-    300,000 & 95.69 \\ \hline
-    400,000 & 96.00 \\ \hline
-    500,000 & 96.13 \\ \hline
-    604,388 (all of training + all of extras) & 96.50 \\ \hline
-  \end{tabular}
-  \caption{Accuracy vs Training Examples}
-  \label{table:train}
-  \end{table}
+	\begin{table}[!h]
+		  \begin{tabular}{ | l || c ||}
+		    \hline
+		    \# of training examples & Accuracy \% \\ \hline \hline
+		    73,257 (just the training set) & 89.28 \\ \hline
+		    100,000 & 93.74 \\ \hline
+		    200,000 & 95.06 \\ \hline
+		    300,000 & 95.69 \\ \hline
+		    400,000 & 96.00 \\ \hline
+		    500,000 & 96.13 \\ \hline
+		    604,388 (all of training + all of extras) & 96.50 \\ \hline
+		  \end{tabular}
+	  \caption{Accuracy vs Training Examples}
+	  \label{table:train}
+	\end{table}
 \end{center}
 
 \begin{center}
@@ -234,17 +234,17 @@ The segmentation results are reported in Table~\ref{table:segmentation}. Please 
 Also, since this definition of success is too variable for a computer to properly evaluate it, the “successes” had to be counted manually. This, unfortunately, introduces a bias in the numbers below as it limits the number of examples that can be used to compile the accuracy statistics.
 
 \begin{center}
-\begin{table}[h]
-  \begin{tabular}{ | l || c ||}
-    \hline
-    Examples (treated with this algorithm) & Accuracy (hand-counted) \% \\ \hline \hline
-    100 examples from training set (2200 to 2300.png) &  36 \\ \hline
-    100 examples from extras set (3000 to 3100.png) & 37 \\
-    \hline
-  \end{tabular}
-  \caption{Examples vs Accuracy for Image Segmentation}
-  \label{table:segmentation}
-  \end{table}
+	\begin{table}[h]
+  		\begin{tabular}{ | l || c ||}
+	    	\hline
+		    Examples (treated with this algorithm) & Accuracy (hand-counted) \% \\ \hline \hline
+		    100 examples from training set (2200 to 2300.png) &  36 \\ \hline
+		    100 examples from extras set (3000 to 3100.png) & 37 \\
+		    \hline
+        \end{tabular}
+		  \caption{Examples vs Accuracy for Image Segmentation}
+		  \label{table:segmentation}
+  	\end{table}
 \end{center}
 
 \section{Discussion and Conclusion}
@@ -262,9 +262,9 @@ The input representation of the images into the Convolutional Neural Network con
 
 The number of layers in our convolutional neural network are relatively small compared to what some of the current solutions are using. It will be interesting to see how our results are affected by deeper networks, more filters in our convolutional layer and even more training data. 
 
-Alternate pooling layers could also be explored. Some research points to the use of Lp-Pooling as a superior pooling layer to the max-pooling we are currently using.
+Alternate pooling layers could also be explored. Some research points to the use of Lp-Pooling\cite{lecun_convolutional_svhn} as a superior pooling layer to the max-pooling we are currently using.
 
-We could also explore the use of Maxout Networks with our current network to see if it helps with delaying overfitting.
+We could also explore the use of Maxout Networks\cite{maxout} with our current network to see if it helps with delaying overfitting.
 
 \subsection{Image Segmentation}
 The image segmentation algorithm could be improved to allow for more than one zone of high probability to contain a digit. Currently, if the numbers of the address are too far apart in the image, they get “boxed” separately and, in the end, only one number gets isolated properly. This is because, after the morphological closing of the vertical gradients, all the numbers are assumed to be in the same connected zone (this was a simplifying assumption that proved to be correct in most cases).

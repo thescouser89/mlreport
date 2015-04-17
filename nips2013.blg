@@ -3,51 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: nips2013.aux
 The style file: plain.bst
 Database file #1: ml.bib
-Warning--I didn't find a database entry for "dean2012large"
 Warning--to sort, need author or key in lasagne
 Warning--to sort, need author or key in nolearn
 Warning--to sort, need author or key in automaticdetect
 Warning--to sort, need author or key in graythresh
 Warning--can't use both volume and number fields in svhn
-You've used 14 entries,
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            571 strings with 6479 characters,
-and the built_in function-call counts, 4995 in all, are:
-= -- 489
-> -- 237
-< -- 6
-+ -- 98
-- -- 82
-* -- 332
-:= -- 759
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 83
+            580 strings with 6899 characters,
+and the built_in function-call counts, 6093 in all, are:
+= -- 588
+> -- 323
+< -- 7
++ -- 132
+- -- 114
+* -- 419
+:= -- 940
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 104
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 187
-empty$ -- 413
-format.name$ -- 82
-if$ -- 1094
+cite$ -- 21
+duplicate$ -- 222
+empty$ -- 474
+format.name$ -- 114
+if$ -- 1318
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 8
-newline$ -- 69
-num.names$ -- 20
-pop$ -- 119
+int.to.str$ -- 16
+missing$ -- 10
+newline$ -- 79
+num.names$ -- 24
+pop$ -- 143
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 88
 quote$ -- 0
-skip$ -- 154
+skip$ -- 185
 stack$ -- 0
-substring$ -- 279
-swap$ -- 61
-text.length$ -- 6
+substring$ -- 329
+swap$ -- 75
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 64
 warning$ -- 5
-while$ -- 39
-width$ -- 16
-write$ -- 142
-(There were 6 warnings)
+while$ -- 46
+width$ -- 18
+write$ -- 163
+(There were 5 warnings)
