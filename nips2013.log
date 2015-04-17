@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.9)  17 APR 2015 10:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.9)  17 APR 2015 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -327,7 +327,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 {/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<images/image02.png, id=126, 493.845pt x 200.75pt>
+<images/image02.png, id=131, 493.845pt x 200.75pt>
 File: images/image02.png Graphic file (type png)
  <use images/image02.png>
 Package pdftex.def Info: images/image02.png used on input line 97.
@@ -337,20 +337,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--98
 []\OT1/ptm/m/n/10 Figure 1: |Orig-i-nal Im-age
  []
 
-<images/image06.png, id=127, 936.49875pt x 380.42125pt>
+<images/image06.png, id=132, 936.49875pt x 380.42125pt>
 File: images/image06.png Graphic file (type png)
 
 <use images/image06.png>
 Package pdftex.def Info: images/image06.png used on input line 102.
 (pdftex.def)             Requested size: 127.1981pt x 51.6681pt.
- <images/image00.png, id=129, 885.3075pt x 357.335pt>
+ <images/image00.png, id=134, 885.3075pt x 357.335pt>
 File: images/image00.png Graphic file (type png)
 
 <use images/image00.png>
 Package pdftex.def Info: images/image00.png used on input line 107.
 (pdftex.def)             Requested size: 127.1981pt x 51.3406pt.
 
-<images/image08.png, id=133, 711.65875pt x 639.38875pt>
+<images/image08.png, id=138, 711.65875pt x 639.38875pt>
 File: images/image08.png Graphic file (type png)
 
 <use images/image08.png>
@@ -399,7 +399,7 @@ l.120 ...r column. The red line is the threshold.}
 l.120 ...r column. The red line is the threshold.}
                                                   
 ? 
-<images/image04.png, id=134, 437.635pt x 410.53375pt>
+<images/image04.png, id=139, 437.635pt x 410.53375pt>
 File: images/image04.png Graphic file (type png)
  <use images/image04.png>
 Package pdftex.def Info: images/image04.png used on input line 124.
@@ -411,39 +411,41 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-<images/image03.png, id=139, 32.12pt x 32.12pt>
+<images/image03.png, id=144, 32.12pt x 32.12pt>
 File: images/image03.png Graphic file (type png)
  <use images/image03.png>
 Package pdftex.def Info: images/image03.png used on input line 136.
 (pdftex.def)             Requested size: 95.39772pt x 95.40546pt.
 
-<images/image07.png, id=140, 32.12pt x 32.12pt>
+<images/image07.png, id=145, 32.12pt x 32.12pt>
 File: images/image07.png Graphic file (type png)
  <use images/image07.png>
 Package pdftex.def Info: images/image07.png used on input line 140.
 (pdftex.def)             Requested size: 95.39772pt x 95.40546pt.
 
-<images/image01.png, id=141, 32.12pt x 32.12pt>
+<images/image01.png, id=146, 32.12pt x 32.12pt>
 File: images/image01.png Graphic file (type png)
  <use images/image01.png>
 Package pdftex.def Info: images/image01.png used on input line 144.
 (pdftex.def)             Requested size: 95.39772pt x 95.40546pt.
 
-Underfull \hbox (badness 2426) in paragraph at lines 171--174
+Underfull \vbox (badness 4378) has occurred while \output is active []
+
+ [3 <./images/image02.png (PNG copy)> <./images/image06.png> <./images/image00.
+png>]
+Underfull \hbox (badness 2426) in paragraph at lines 184--187
 []\OT1/ptm/m/n/10 NN with Con-vo-lu-tional Lay-ers and Con-trast Nor-mal-iza-ti
 on and
  []
 
 
-Overfull \hbox (7.64174pt too wide) in paragraph at lines 158--176
+Overfull \hbox (7.64174pt too wide) in paragraph at lines 171--189
 [][] 
  []
 
 
-Underfull \vbox (badness 4378) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [3 <./images/image02.png (PNG copy)> <./images/image06.png> <./images/image00.
-png>]
 [4 <./images/image08.png> <./images/image04.png> <./images/image03.png (PNG cop
 y)> <./images/image07.png (PNG copy)> <./images/image01.png (PNG copy)>]
 Missing character: There is no ‚ in font ptmr7t!
@@ -462,10 +464,10 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-<images/image05.png, id=166, 405.515pt x 268.00125pt>
+<images/image05.png, id=172, 405.515pt x 268.00125pt>
 File: images/image05.png Graphic file (type png)
  <use images/image05.png>
-Package pdftex.def Info: images/image05.png used on input line 209.
+Package pdftex.def Info: images/image05.png used on input line 222.
 (pdftex.def)             Requested size: 317.9892pt x 210.1606pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -482,8 +484,6 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-[5 <./images/image05.png (PNG copy)>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -494,24 +494,15 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-<image09.jpg, id=178, 903.375pt x 653.44125pt>
+[5] <image09.jpg, id=184, 903.375pt x 653.44125pt>
 File: image09.jpg Graphic file (type jpg)
  <use image09.jpg>
-Package pdftex.def Info: image09.jpg used on input line 229.
+Package pdftex.def Info: image09.jpg used on input line 242.
 (pdftex.def)             Requested size: 317.9892pt x 230.01402pt.
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
- [6 <./image09.jpg>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
+
+Underfull \vbox (badness 7944) has occurred while \output is active []
+
+ [6 <./images/image05.png (PNG copy)> <./image09.jpg>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -536,34 +527,48 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
- [7] (./nips2013.bbl [8])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+ [7]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+ (./nips2013.bbl [8])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
- (./nips2013.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+
+(./nips2013.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
 Package rerunfilecheck Info: File `nips2013.out' has not changed.
-(rerunfilecheck)             Checksum: A603109FB07D98E975C85871A679A938;1607.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
+(rerunfilecheck)             Checksum: BF3125008A7B10B661FF8E20BF1B3D2E;1690.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 6917 strings out of 495025
- 105176 string characters out of 6181516
- 193579 words of memory out of 5000000
- 10006 multiletter control sequences out of 15000+600000
+ 6919 strings out of 495025
+ 105216 string characters out of 6181516
+ 192579 words of memory out of 5000000
+ 10007 multiletter control sequences out of 15000+600000
  13867 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,10n,40p,829b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on nips2013.pdf (9 pages, 338018 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on nips2013.pdf (9 pages, 346234 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
